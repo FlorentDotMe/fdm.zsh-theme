@@ -1,11 +1,15 @@
+# Current username color: root=red, other=green
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 
+# Set return code format printable
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
+# Set prompt prefix [USERNAME@HOSTNAME:CURRENTDIR]
 PROMPT='%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@%B%{$fg[yellow]%}%m%b%{$reset_color%}:%{$fg[blue]%}%B%c/%b%{$reset_color%} $(git_prompt_info)%(!.#.$) '
+# Set prompt end line : [RETURN CODE] [TIMEDATE]
 RPROMPT="${return_code} [%*]"
 
-# git theming
+# Git theme
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg_no_bold[yellow]%}%B"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%b%{$fg_bold[blue]%})%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_CLEAN=""
