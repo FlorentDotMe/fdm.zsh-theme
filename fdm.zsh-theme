@@ -2,7 +2,7 @@
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 
 # Set return code format printable
-local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+local return_code="%(?..%{$fg[red]%}%?%{$reset_color%})"
 
 # Set prompt prefix [USERNAME@HOSTNAME:CURRENTDIR]
 PROMPT='%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@%B%{$fg[yellow]%}%m%b%{$reset_color%}:%{$fg[blue]%}%B%c/%b%{$reset_color%} $(git_prompt_info)%(!.#.$) '
