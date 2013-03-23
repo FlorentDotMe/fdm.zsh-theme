@@ -4,14 +4,19 @@ FDM's oh-my-zsh theme
 # Mail: florentdotme@gmail.com
 # GIT Repository: http://github.com/FlorentDotMe/
 ------------------------
-Info:   This theme is derived from oh-my-zsh related clean.zsh-theme
+Info:   zsh environment, including oh-my-zsh fdm-s theme
 
 Files
 ------------------------
 fdm.zsh-theme
-    : theme for oh-my-zsh shell
+    : theme for oh-my-zsh shell extension
+zshrc
+    : zsh settings file (~/.zshrc)
+vimrc
+    : vim settings file (~/.vimrc)
 
 Instructions
 ------------
 1. Save the file in your ../.oh-my-zsh/themes/ directory.
-2. Set the ZSH_THEME variable to "fdm".
+2. Set the ZSH_THEME variable to "fdm" in you .zshrc.
+3. Or use included .zshrc.
